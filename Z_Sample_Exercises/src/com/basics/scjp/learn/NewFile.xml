@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Annot_Suite" >
+
+    <test name="Annot_Example" >
+          
+          <classes>  
+          	        
+         
+          	 <class name="com.basics.scjp.learn.Annot_Test_class"/>
+          	 
+         
+               
+          </classes>
+        </test>
+
+
+   
+</suite>

@@ -1,0 +1,22 @@
+<suite name="SwPortal_FOS_UI_DB" parallel="false">
+     <parameter name="envid" value="swqa2" />
+
+  	<test name="DB_UI_TKEY" >
+          <parameter name="testDataLocator" value="swqa1_fosInputTestDataLocator"/>      
+          <parameter name="browser" value="firefox" /> 
+          <parameter name="password" value="qaswportal123" />
+      
+          
+          <parameter name="username2" value="qa@partneradmin.com" />
+	      <parameter name="uname_partner" value="qa@partneradmin.com" />
+          
+          <classes>  
+          	
+               <class name="com.selenium.learn.Derived_1"/>    
+	
+	    
+	      </classes>
+	      
+	     </test>
+
+</suite>

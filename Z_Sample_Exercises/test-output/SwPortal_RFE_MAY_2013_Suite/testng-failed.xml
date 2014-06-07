@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SwPortal_RFE_MAY_2013_Suite]">
+  <parameter name="username" value="slkcsupport"/>
+  <parameter name="test" value="portalstage"/>
+  <test name="Run1(failed)" preserve-order="true">
+    <parameter name="username" value="slkcsupport"/>
+    <parameter name="test" value="portalstage"/>
+    <classes>
+      <class name="com.selenium.learn.Xml_Read">
+        <methods>
+          <include name="test_2"/>
+          <include name="test_3"/>
+          <include name="test_1"/>
+        </methods>
+      </class> <!-- com.selenium.learn.Xml_Read -->
+    </classes>
+  </test> <!-- Run1(failed) -->
+</suite> <!-- Failed suite [SwPortal_RFE_MAY_2013_Suite] -->

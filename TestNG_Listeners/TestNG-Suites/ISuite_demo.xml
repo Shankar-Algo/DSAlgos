@@ -1,0 +1,26 @@
+<suite name="ISuite_demo">
+	
+	<test name ="ISuite_demo_tests">
+		
+		<parameter name="username" value="slkcsupport"/>
+		<parameter name="password" value="slkcsupport"/>
+		
+		<classes>
+			
+			<class name="com.tests.TestNG_ISuite"/>
+			
+			
+		</classes>
+		
+		
+		
+	</test>
+	
+	<listeners>
+		
+		<listener class-name = "com.testNG.ISuite_Listener_demo"/>
+		
+	</listeners>
+	
+	
+</suite>

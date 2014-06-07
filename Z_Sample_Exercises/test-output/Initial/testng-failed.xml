@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Initial]">
+  <parameter name="username" value="slkcsupport"/>
+  <test name="Run1(failed)" preserve-order="true">
+    <parameter name="username" value="slkcsupport"/>
+    <classes>
+      <class name="com.selenium.learn.Xml_Read">
+        <methods>
+          <include name="test_1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.selenium.learn.Xml_Read -->
+    </classes>
+  </test> <!-- Run1(failed) -->
+</suite> <!-- Failed suite [Initial] -->

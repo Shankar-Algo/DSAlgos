@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ITestNG_demo]">
+  <parameter name="par_1" value="value_1"/>
+  <parameter name="par_2" value="value_2"/>
+  <parameter name="par_3" value="value_3"/>
+  <listeners>
+    <listener class-name="com.testNG.IDemo_TestNG_List"/>
+  </listeners>
+  <test name="ITestNG_demo_tests(failed)">
+    <parameter name="par_1" value="value_1"/>
+    <parameter name="par_2" value="value_2"/>
+    <classes>
+      <class name="com.tests.TestNG_ITNG">
+        <methods>
+          <include name="TestNG_ITNG_M7"/>
+        </methods>
+      </class> <!-- com.tests.TestNG_ITNG -->
+    </classes>
+  </test> <!-- ITestNG_demo_tests(failed) -->
+</suite> <!-- Failed suite [ITestNG_demo] -->

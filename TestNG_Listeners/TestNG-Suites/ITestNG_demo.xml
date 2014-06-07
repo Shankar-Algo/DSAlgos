@@ -1,0 +1,35 @@
+<suite name="ITestNG_demo">
+	
+	<parameter name="par_3" value="value_3"/>
+	<test name ="ITestNG_demo_tests">
+		
+		
+		<parameter name="par_1" value="value_1"/>
+		<parameter name="par_2" value="value_2"/>
+			
+		
+		
+			
+			
+			<classes>
+			
+			
+		<class name="com.tests.TestNG_ITNG"/>
+			
+			
+		</classes>
+		
+		
+		
+	</test>
+	
+
+	
+	<listeners>
+		
+		<listener class-name = "com.testNG.IDemo_TestNG_List"/>
+		
+	</listeners>
+	
+	
+</suite>

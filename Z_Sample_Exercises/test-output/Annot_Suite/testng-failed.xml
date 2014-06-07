@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Annot_Suite]">
+  <test name="Annot_Example(failed)" preserve-order="true">
+    <classes>
+      <class name="com.basics.scjp.learn.Annot_Test_class">
+        <methods>
+          <include name="verifyData1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.basics.scjp.learn.Annot_Test_class -->
+    </classes>
+  </test> <!-- Annot_Example(failed) -->
+</suite> <!-- Failed suite [Annot_Suite] -->

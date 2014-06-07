@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ISuite_demo]">
+  <parameter name="username" value="slkcsupport"/>
+  <parameter name="password" value="slkcsupport"/>
+  <listeners>
+    <listener class-name="com.testNG.ISuite_Listener_demo"/>
+  </listeners>
+  <test name="ISuite_demo_tests(failed)">
+    <parameter name="username" value="slkcsupport"/>
+    <parameter name="password" value="slkcsupport"/>
+    <classes>
+      <class name="com.tests.TestNG_ISuite">
+        <methods>
+          <include name="TestNG_ISuite_M4" invocation-numbers="2"/>
+        </methods>
+      </class> <!-- com.tests.TestNG_ISuite -->
+    </classes>
+  </test> <!-- ISuite_demo_tests(failed) -->
+</suite> <!-- Failed suite [ISuite_demo] -->

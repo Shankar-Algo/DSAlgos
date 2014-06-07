@@ -1,0 +1,27 @@
+
+<suite name="SwPortal_RFE_MAY_2013_Suite" parallel="false">
+  <parameter name="test" value="portalstage" />
+   
+     
+<test name="Run1">
+
+ <parameter name="username" value="slkcsupport"/>  
+<classes>
+<class name = "com.selenium.learn.Xml_Read"/>
+</classes>
+</test>
+
+</suite>
+
+<!-- 
+<groups>
+<run>
+<exclude name="g1"/>
+
+</run>
+</groups>
+	<classes>
+	 <class name="com.selenium.learn.InheritGroups_Demo"/> 
+	<class name="com.selenium.learn.InheritGroups_Demo_1"/> 
+	 <class name="Test_Annotations_1"/> 
+	</classes> -->

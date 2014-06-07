@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portalConfig>
+	<environments>
+		<environment id="swqa1">
+			<url>http://sw7qa.brocade.com</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+		<environment id="swqa2">
+			<url>http://swqa2.brocade.com</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+		<environment id="portalstage">
+			<url>http://portalstage.brocade.com</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>45</waitTimeInSecs>
+		</environment>
+		<environment id="dev1">
+			<url>http://swdev1.brocade.com</url>
+			<sendMailAlerts>false</sendMailAlerts>
+			<distList>SWPortal-QA-Team@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+		<environment id="swdev2">
+			<url>http://sw7qa.brocade.com/wps/myportal/qavp1/swportal</url>
+			<sendMailAlerts>false</sendMailAlerts>
+			<distList>SWPortal-QA-Team@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+		
+		<environment id="swvp1">
+			<url>http://sw7qa.brocade.com/wps/myportal/swpvp1/SWPortalhome</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+
+<!-- Used for POC of web service client automation -->
+		<environment id="dev_wsc">
+			<url>http://brm-ud-wasapp-1.brocade.com:9081/swpwebserviceclientweb/WSDLInputPage.jsp</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+	</environments>
+
+<!-- ,ramyar@brocade.com,rsourav@brocade.com,sbharat@brocade.com,rtalari@brocade.com -->
+	<testConfig>
+		<testData>
+			<baseLocations>
+			    <baseLocation id="swqa1">testdata\</baseLocation>
+				<baseLocation id="swqa2">testdata\</baseLocation>
+				<baseLocation id="portalstage">testdata\</baseLocation>
+				<baseLocation id="dev1">testdata\</baseLocation>
+				<baseLocation id="swdev2">testdata\</baseLocation>	
+				<baseLocation id="swvp1">testdata\</baseLocation>			
+			</baseLocations>
+			
+			<locators>
+			    <locator id="swqa1_fosInputTestDataLocator" base="swqa1">lgen\fos\SwPortal_Input.xls</locator>
+				<locator id="swqa2_fosInputTestDataLocator" base="swqa2">lgen\fos\SwPortal_Input.xls</locator>
+				<locator id="portalstage_fosInputTestDataLocator" base="portalstage">lgen\fos\SwPortal_Input.xls</locator>
+				<locator id="dev_fosInputTestDataLocator" base="dev1">lgen\fos\SwPortal_Input.xls</locator>
+				<locator id="swdev2_fosInputTestDataLocator" base="swdev2">lgen\fos\SwPortal_Input.xls</locator>
+				<locator id="swvp1_fosInputTestDataLocator" base="swvp1">lgen\fos\SwPortal_Input.xls</locator>
+				
+								
+				<locator id="swqa1_nosInputTestDataLocator" base="swqa1">lgen\nos\SwPortal_Input.xls</locator>
+				<locator id="swqa2_nosInputTestDataLocator" base="swqa2">lgen\nos\SwPortal_Input.xls</locator>				
+				<locator id="portalstage_nosInputTestDataLocator" base="portalstage">lgen\nos\SwPortal_Input.xls</locator>				
+				<locator id="dev_nosInputTestDataLocator" base="dev1">lgen\nos\SwPortal_Input.xls</locator>
+				<locator id="swdev2_nosInputTestDataLocator" base="swdev2">lgen\nos\SwPortal_Input.xls</locator>
+				<locator id="swvp1_nosInputTestDataLocator" base="swvp1">lgen\nos\SwPortal_Input.xls</locator>
+				<locator id="swvp1_reportsInputTestDataLocator" base="swvp1">lgen\fos\SwPortal_Input.xls</locator>
+				
+				
+				<locator id="swqa1_ipInputTestDataLocator" base="swqa1">lgen\ip\SwPortal_Input.xls</locator>
+				<locator id="swqa2_ipInputTestDataLocator" base="swqa2">lgen\ip\SwPortal_Input.xls</locator>
+				<locator id="portalstage_ipInputTestDataLocator" base="portalstage">lgen\ip\SwPortal_Input.xls</locator>
+				<locator id="dev_ipInputTestDataLocator" base="dev1">lgen\ip\SwPortal_Input.xls</locator>			    
+				<locator id="swdev2_ipInputTestDataLocator" base="swdev2">lgen\ip\SwPortal_Input.xls</locator>
+				
+				<locator id="swqa1_dcfmInputTestDataLocator" base="swqa1">lgen\dcfm\SwPortal_Input.xls</locator>
+				<locator id="swqa2_dcfmInputTestDataLocator" base="swqa2">lgen\dcfm\SwPortal_Input.xls</locator>
+				<locator id="portalstage_dcfmInputTestDataLocator" base="portalstage">lgen\dcfm\SwPortal_Input.xls</locator>
+				<locator id="dev_dcfmInputTestDataLocator" base="dev1">lgen\dcfm\SwPortal_Input.xls</locator>			    
+				<locator id="swdev2_dcfmInputTestDataLocator" base="swdev2">lgen\dcfm\SwPortal_Input.xls</locator>
+				
+				<locator id="swqa1_bnaInputTestDataLocator" base="swqa1">lgen\bna\SwPortal_Input.xls</locator>
+				<locator id="swqa2_bnaInputTestDataLocator" base="swqa2">lgen\bna\SwPortal_Input.xls</locator>
+				<locator id="portalstage_bnaInputTestDataLocator" base="portalstage">lgen\bna\SwPortal_Input.xls</locator>
+				<locator id="dev_bnaInputTestDataLocator" base="dev1">lgen\bna\SwPortal_Input.xls</locator>			    
+				<locator id="swdev2_bnaInputTestDataLocator" base="swdev2">lgen\bna\SwPortal_Input.xls</locator>
+				
+				<locator id="swqa1_rfsInputTestDataLocator" base="swqa1">lgen\rfs\SwPortal_Input.xls</locator>
+				<locator id="swqa2_rfsInputTestDataLocator" base="swqa2">lgen\rfs\SwPortal_Input.xls</locator>
+				<locator id="portalstage_rfsInputTestDataLocator" base="portalstage">lgen\rfs\SwPortal_Input.xls</locator>
+				<locator id="dev_rfsInputTestDataLocator" base="dev1">lgen\rfs\SwPortal_Input.xls</locator>			    
+				<locator id="swdev2_rfsInputTestDataLocator" base="swdev2">lgen\rfs\SwPortal_Input.xls</locator>
+				
+				<locator id="swqa1_partnerInputTestDataLocator" base="swqa1">partner\SwPortal_Input.xls</locator>
+				<locator id="swqa2_partnerInputTestDataLocator" base="swqa2">partner\SwPortal_Input.xls</locator>
+				<locator id="portalstage_partnerInputTestDataLocator" base="portalstage">partner\SwPortal_Input.xls</locator>
+				<locator id="dev_partnerInputTestDataLocator" base="dev1">partner\SwPortal_Input.xls</locator>			    
+				<locator id="swdev2_partneripInputTestDataLocator" base="swdev2">partner\SwPortal_Input.xls</locator>
+				
+				<locator id="swqa1_tKeyMgmtTestDataLocator" base="swqa1">tkeymgt\SwPortal_TkeyMgt_Input.xls</locator>
+				<locator id="swqa2_tKeyMgmtTestDataLocator" base="swqa2">tkeymgt\SwPortal_TkeyMgt_Input.xls</locator>
+				<locator id="portalstage_tKeyMgmtTestDataLocator" base="portalstage">tkeymgt\SwPortal_TkeyMgt_Input.xls</locator>
+				<locator id="dev_tKeyMgmtTestDataLocator" base="dev1">tkeymgt\SwPortal_TkeyMgt_Input.xls</locator>			    
+				<locator id="swdev2_tKeyMgmtTestDataLocator" base="swdev2">tkeymgt\SwPortal_TkeyMgt_Input.xls</locator>
+				
+				<locator id="swqa1_adminInputTestDataLocator" base="swqa1">admin\SwPortal_Admin_Input.xls</locator>
+				<locator id="swqa2_adminInputTestDataLocator" base="swqa2">admin\SwPortal_Admin_Input.xls</locator>
+				<locator id="portalstage_adminInputTestDataLocator" base="portalstage">admin\SwPortal_Admin_Input.xls</locator>
+				<locator id="dev_adminInputTestDataLocator" base="dev1">admin\SwPortal_Admin_Input.xls</locator>			    
+				<locator id="swdev2_adminInputTestDataLocator" base="swdev2">admin\SwPortal_Admin_Input.xls</locator>
+				
+				<locator id="swqa1_rfeInputTestDataLocator" base="swqa1">lgen\fos\SS_SwPortal_Input.xlsx</locator>
+				
+				<locator id="swqa1_reportsInputTestDataLocator" base="swqa1">reports\SwPortal_Input.xls</locator>
+				<locator id="swqa2_reportsInputTestDataLocator" base="swqa1">reports\SwPortal_Input.xls</locator>
+				<locator id="swvp1_reportsInputTestDataLocator" base="swqa1">reports\SwPortal_Input.xls</locator>
+			
+			</locators>
+		</testData>
+	</testConfig>
+
+	<seleniumSetup>
+		<!--<isLocalRun>false</isLocalRun>-->
+		 <isLocalRun>true</isLocalRun>  
+		 <hubUrl>http://localhost:4444/wd/hub</hubUrl>
+	</seleniumSetup>
+</portalConfig>
+

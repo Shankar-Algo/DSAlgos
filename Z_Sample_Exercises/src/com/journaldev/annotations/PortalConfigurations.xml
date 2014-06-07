@@ -1,0 +1,16 @@
+<portalConfig>
+	<environments>
+		<environment id="swqa1">
+			<url>http://sw7qa.brocade.com</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+		<environment id="swqa2">
+			<url>http://swqa2.brocade.com</url>
+			<sendMailAlerts>true</sendMailAlerts>
+			<distList>vthakur@brocade.com,ramyar@brocade.com,sbharat@brocade.com,rtalari@brocade.com</distList>
+			<waitTimeInSecs>15</waitTimeInSecs>
+		</environment>
+	</environments>
+</portalConfig>
