@@ -37,6 +37,8 @@ public class Tower
 	 public void print() 
 	 { 
 		 System.out.println("Contents of Tower " + index()); 
+		
+		 
 		 /*for (int i :disks ) 
 		 {     
 			 System.out.println("    " + disks.get(i)); 
@@ -46,10 +48,16 @@ public class Tower
 	 {    if (n > 0) 
 	 { 
 		 moveDisks(n - 1, buffer, destination); 
+		 System.out.println(n-1);
 		 moveTopTo(destination); 
+		System.out.println(this);
 		 buffer.moveDisks(n - 1, destination, this); 
 		 } 
 	 } 
+	 public String toString()
+	 {
+		 return "Tower : "+this.index();
+	 }
 	 public static void main(String[] args) 
 	 {   int n = 5; 
 	   Tower[] towers = new Tower[n]; 
@@ -58,5 +66,9 @@ public class Tower
 	   for (int i = n - 1; i >= 0; i--) 
 		   towers[0].add(i); 
 	   towers[0].moveDisks(n, towers[2], towers[1]); 
+	   System.out.println(1 << 6);
+	 /*  System.out.println(towers[0]);
+	   System.out.println(towers[1]);
+	   System.out.println(towers[2]);*/
 		   }
 	 }
