@@ -11,7 +11,11 @@ public class LinkedList_Ex {
 
 	public void init()
 	{
-		this.ll_ops_init();
+		//this.ll_ops_init();
+		Node n = new Node(10);
+		n.Node_Insert(20);
+		n.Node_Insert(30);
+		this.reverse_LL(null, n);
 		
 		//this.LL_ops_insert();
 		//this.LL_ops_display();
@@ -104,4 +108,45 @@ public class LinkedList_Ex {
 		
 		return result;
 	}
-}
+	
+	public void reverse_LL( Node prev , Node curr)
+	{
+		
+	
+		while(curr.next!=null)
+		{
+			reverse_LL(curr , curr.next);
+			break;
+		}
+		curr.next=prev;
+		System.out.println(curr.d);
+		int i =0;
+		for(i = 0 ; i < 1 ; i++)
+			System.out.println();
+		System.out.println(i);
+	}
+		
+		
+		/*
+		Node head = n;
+		Node curr = n;
+		Node prev = null;
+		Node next ;
+		while(curr.next!=null)
+		{
+			
+			next= curr.next;
+			
+			prev = curr;
+			curr = next;
+		}
+		
+		while(prev.next!=null)
+		{
+			curr.next = prev;
+			curr = prev;
+			
+		}*/
+		
+	}
+

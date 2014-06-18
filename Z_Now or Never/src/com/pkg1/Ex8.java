@@ -1,5 +1,9 @@
 package com.pkg1;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 
 //complete array solutions one by one
 
@@ -31,8 +35,9 @@ public class Ex8
 	//System.out.println(this.check_anag("accb", "bcca"));
 	
 	//this.repl_empty_char(" a s d f ");
-		this.check_rot_substring("test","test");
-	
+	//	this.check_rot_substring("test","test");
+//	System.out.println(this.remove_dupl_characters("abad"));
+	this.it_hmaps();
 	}
 	
 	//reverse a string and find it is palindrome or not
@@ -198,4 +203,135 @@ public class Ex8
 		 }
 	 }
 	 
+	 String remove_dupl_characters(String s)
+	 {
+		 char c[] = s.toCharArray();
+		 int len = c.length;
+		if(len<=1)
+			return s;
+
+		for(int i = 0 ; i < len; i ++)
+		{ 
+			for(int j = i+1 ; j < len ; j++)
+			{
+				if(c[i]==c[j])
+				{
+					for(int k = j ; k < len-1 ; k++)
+					{
+						c[k] = c[k+1];
+							
+					}
+					len--;
+			
+				}
+
+			}
+
+	 }
+
+	String t ="";
+	for(int i =0 ; i < len ; i++)
+		 t = t + c[i];
+
+	return t;
+	}
+	 
+	 
+	 HashMap<Integer,ArrayList<Integer>> mp = new HashMap();
+	 HashMap<Integer,ArrayList<Integer>> mp1 = new HashMap();
+	 void it_hmaps()
+	 {
+	 int cntr=2;
+	 ArrayList<Integer> obj = new ArrayList<Integer>();
+	 obj.add(1);
+	 obj.add(2);
+	 obj.add(3);
+	 ArrayList<Integer> obj1 = new ArrayList<Integer>();
+	 obj1.add(4);
+	 obj1.add(5);
+	 obj1.add(6);
+
+	 ArrayList<Integer> obj2 = new ArrayList<Integer>();
+	 obj2.add(1);
+	 obj2.add(2);
+	 obj2.add(3);
+	 
+	 ArrayList<Integer> obj3 = new ArrayList<Integer>();
+	// obj3.add(3);
+	 obj3.add(4);
+	 obj3.add(5);
+	 obj3.add(6);
+
+
+
+
+	 mp.put(1,obj);
+	 mp1.put(1,obj1);
+	 mp.put(2,obj2);
+	 mp1.put(2,obj3);
+
+
+
+	 int p_diff = -1;
+	 int index = 0;
+	 for(int i = 1 ; i <=2 ; i++ )
+	 {
+	 int t_diff = diff(mp.get(i).size(),mp1.get(i).size());
+	 if(p_diff == -1 || p_diff > t_diff)
+	 {
+	 p_diff = t_diff;
+	 index = i;
+	 }	
+
+	 }
+	for(Map.Entry tp : mp.entrySet())
+	{
+		
+	}
+	
+	 for(int a : mp.get(index))
+	 System.out.println(a);
+	 for(int a : mp1.get(index))
+	 System.out.println(a);
+
+	 
+	 ArrayList<Integer> list = mp.get(2);
+	 /*for(int a : list)
+		 System.out.println(a);*/
+	 }
+
+	 int diff(int a , int b)
+	 {
+
+	 if(a>b)
+	 return a-b;
+	 else
+	 return b-a;
+
+	 }
+	 
+	 int arr[]={30,10,10,10,20};
+
+	 ArrayList check_part(ArrayList<Integer> list )
+	 {
+	 ArrayList<Integer> temp =new ArrayList();
+	 for(int i= 1 ;i <= 6 ; i++)
+	 {
+	 	if(!list.contains(i))
+	 	{
+	 		temp.add(i);
+	 	}
+
+	 }
+
+	 int val = 10;
+	 int t_value = 0;
+	 for(int a : temp)
+	 	t_value = t_value + arr[a];
+	 //if(t_value==val)
+	 return temp;
+	 /*else
+	 return null;*/
+
+	 }
 }

@@ -5,7 +5,7 @@ public class Node
 
 	int d ;
 	Node next;
-	
+	Node previous;
 	Node(int d)
 	{
 		this.d=d;

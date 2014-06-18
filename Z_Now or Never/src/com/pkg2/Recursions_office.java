@@ -3,6 +3,7 @@ package com.pkg2;
 
 
 
+import java.awt.Point;
 import java.util.ArrayList;
 
 public class Recursions_office {
@@ -17,6 +18,8 @@ public class Recursions_office {
 		/*StringBuffer s = new StringBuffer("{1,2,3}");
 		s.replace(2, 3, ";");
 		System.out.println(s);*/
+		
+		
 		obj.init();
 	}
 	
@@ -33,7 +36,7 @@ public class Recursions_office {
 		//this.init_subset("{1,2,3,4}");
 		/*StringBuffer sb = new StringBuffer("{1,2,3}");
 		System.out.println(sb.indexOf(","));*/
-		ArrayList<Integer> obj = new ArrayList<Integer>();
+		/*ArrayList<Integer> obj = new ArrayList<Integer>();
 		obj.add(1);
 		obj.add(2);
 		obj.add(3);
@@ -45,7 +48,12 @@ public class Recursions_office {
 			{
 				System.out.println((Integer)a);
 			}
-		}
+		}*/
+		/*this.getPaths(1,2);
+		this.getPaths_y(1, 2);
+		this.displayed_paths();*/
+		System.out.println(this.makeChange(100, 25));
+		
 	}
 	
 
@@ -277,4 +285,94 @@ public class Recursions_office {
 			 }
 			 return allsubsets;
 	}
+	
+	ArrayList<Point> current_path = new ArrayList<Point>();
+	ArrayList<Point> current_path1 = new ArrayList<Point>();
+	 public  boolean getPaths(int x, int y ) 
+	 {  Point p = new Point(x, y);
+	  current_path.add(p); 
+	  if (0 == x && 0 == y) return true; 
+	  // current_path 6  
+	  boolean success = false; 
+	  if (x >= 1) 
+	  { // Try right 8  
+		  success = getPaths(x - 1, y); // Free!  Go right 9 
+		System.out.println(success);
+	  } 
+	  if (!success && y >= 1) 
+		  { // Try down 11 
+		  success = getPaths(x, y - 1); // Free!  Go down 12  
+		  } 
+	    if (!success) 
+	    { 
+	    	current_path.remove(p); // Wrong way! 15  
+	    	} 
+	    
+	   
+	    return success; 
+	    }
+	  public boolean getPaths_y(int x1 , int y1)
+	  {
+		  Point p1 = new Point(x1, y1);
+		    current_path1.add(p1); 
+			  if (0 == x1 && 0 == y1) return true; 
+			  // current_path 6  
+			  boolean success1 = false; 
+			 
+			  if (  y1 >= 1) 
+			  { // Try down 11 
+				  success1 = getPaths_y(x1, y1 - 1);
+				   // Free!  Go down 12  
+			  System.out.println(success1);
+			  } 
+			  if ( !success1 && x1 >= 1) 
+			  { // Try right 8  
+				  success1 = getPaths_y(x1-1,y1);
+				  // Free!  Go right 9 
+				
+			  } 
+			 
+			    if (!success1) 
+			    { 
+			    	current_path1.remove(p1); // Wrong way! 15  
+			    	} 
+			    
+			    return success1;
+		    
+	  }
+	 void displayed_paths()
+	 {
+		 for(Point p : current_path)
+			 System.out.println(p.x+"  "+p.y);
+		 System.out.println("--------------------------------------");
+		 for(Point p : current_path1)
+			 System.out.println(p.x+"  "+p.y);
+	 }
+	 
+	 public static int makeChange(int n, int denom) 
+	 {
+		 int next_denom = 0; 
+		 switch (denom) 
+		 { 
+		 case 25: 
+			 next_denom = 10; 
+			 break; 
+			 case 10: 
+				 next_denom = 5; 
+				 break; 
+				 case 5: 
+				 next_denom = 1; 
+				 break; 
+				 case 1: 
+					 return 1; 
+		} 
+					 
+					 int ways = 0; 
+					 for (int i = 0; i * denom <= n; i++)
+					 {  
+						 ways += makeChange(n - i * denom, next_denom); 
+					 }
+					 System.out.println(ways);
+					   return ways; 
+	} 
 }

@@ -1,6 +1,6 @@
 package com.pkg2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Rank_Display
 {
@@ -9,6 +9,7 @@ public static void main(String args[])
 {
 Rank_Display obj = new Rank_Display();
 obj.init();
+
 
 }
 int a[] = new int [5];
