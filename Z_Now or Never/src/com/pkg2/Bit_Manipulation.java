@@ -13,7 +13,7 @@ public class Bit_Manipulation {
 
 	void init()
 	{
-		//this.con_string_binary("12.625");
+		this.con_string_binary("12.45");
 		//System.out.println(this.swapOddEvenBits(9));
 		ArrayList<String> str = new ArrayList<String>();
 		str.add("0000");
@@ -22,7 +22,7 @@ public class Bit_Manipulation {
 		//str.add("0011");
 		str.add("0100");
 		str.add("0101");
-		System.out.println(findMissing(str));
+		//System.out.println(findMissing(str));
 	}
 	
 	public void con_string_binary(String n)

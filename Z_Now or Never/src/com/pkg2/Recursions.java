@@ -17,7 +17,7 @@ public class Recursions
 		/*ArrayList<Integer> n1 = new ArrayList<Integer>();
 		n1.add(1);
 		n1.add(2);
-		n1.add(3);
+		n1.add(3);//
 		n1.add(4);
 		n1.add(5);
 		this.subset(n1, 0,0);
@@ -25,9 +25,14 @@ public class Recursions
 		{
 			System.out.println(s);
 		}*/
-		this.getPaths(2, 2);
+		this.getPaths(0,0,"");
 		for(String s : this.current_path)
+		{
+			System.out.println();
 			System.out.println(s);
+		}
+		ArrayList<String> list1 = new ArrayList<String>();
+		
 	}
 	
 	
@@ -92,8 +97,63 @@ public class Recursions
 		}
 	}
 	
-	ArrayList<String> current_path = new ArrayList<String>(); 
-	 public  boolean getPaths(int x, int y) 
+	//ArrayList<ArrayList<String>> current_path = new ArrayList<ArrayList<String>>(); 
+	ArrayList<String> current_path = new ArrayList<String>();
+	int max_limit = 10;
+	String strr="";
+	public  boolean getPaths(int x, int y , String tem) 
+	 { 
+		 //Point p = new Point(x, y); 
+	//	strr=x+" --> "+y;
+		 tem = tem + " "+x+" --> "+y +",";
+		// System.out.println(tem);
+		 if (2 == x && 2 == y) 
+		 {
+			 max_limit--;
+			 
+			 if(!current_path.contains(tem))
+				 current_path.add(tem); 
+			 return true; 
+		 }
+		 
+		 if(max_limit==0)
+			 return true;
+		 // current_path 6  
+		 boolean success = false; 
+		 if ( y < 2 && check(x,y,tem) )
+		 {
+			 
+			 success = getPaths(x, y + 1,tem); // Free!  Go down 
+			 
+		 }
+		 
+		 if ((x < 2 ) && check(x,y,tem)) 
+		 {
+		 
+			
+			    success = getPaths(x+1, y,tem); // Free!  Go right 
+			   
+		 } 
+	
+		   
+		 if(max_limit==0)
+			 return true;
+		
+		 return success; 
+		
+	 }
+		 
+	 
+	
+	public boolean check(int x , int y ,String temp)
+	{
+		if(((x+1) <= 2 || (y+1) <=2) && (!temp.contains(x+1+" --> "+y) || !!temp.contains(x+1+" --> "+y)))
+			return true;
+		else
+			return false;
+	}
+}
+	/* public  boolean getPaths(int x, int y) 
 	 { 
 		 //Point p = new Point(x, y); 
 		 String str = " "+x+" --> "+y;
@@ -118,5 +178,5 @@ public class Recursions
 		 return success; 
 		 }
 		 
-	 }
+	 }*/
 	
