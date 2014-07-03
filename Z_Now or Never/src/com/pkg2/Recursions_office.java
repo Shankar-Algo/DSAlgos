@@ -52,7 +52,7 @@ public class Recursions_office {
 		/*this.getPaths(1,2);
 		this.getPaths_y(1, 2);
 		this.displayed_paths();*/
-		System.out.println(this.makeChange(100, 25));
+		System.out.println(this.makeChange(10, 10));
 		
 	}
 	
@@ -354,9 +354,9 @@ public class Recursions_office {
 		 int next_denom = 0; 
 		 switch (denom) 
 		 { 
-		 case 25: 
+		/* case 25: 
 			 next_denom = 10; 
-			 break; 
+			 break; */
 			 case 10: 
 				 next_denom = 5; 
 				 break; 
@@ -371,8 +371,9 @@ public class Recursions_office {
 					 for (int i = 0; i * denom <= n; i++)
 					 {  
 						 ways += makeChange(n - i * denom, next_denom); 
+						 //System.out.println(ways);
 					 }
-					 System.out.println(ways);
+					// System.out.println(ways);
 					   return ways; 
 	} 
 }

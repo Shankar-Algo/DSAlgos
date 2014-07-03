@@ -10,6 +10,8 @@ public class Recursions
 	
 		Recursions obj = new Recursions();
 		obj.init();
+		String t = "bc";
+		System.out.println(t.compareTo("ad"));
 	}
 
 	void init()
@@ -32,7 +34,8 @@ public class Recursions
 			System.out.println(s);
 		}
 		ArrayList<String> list1 = new ArrayList<String>();
-		
+		char c[] = new char[6];
+		printPar(3,3,c,0);
 	}
 	
 	
@@ -116,18 +119,18 @@ public class Recursions
 			 return true; 
 		 }
 		 
-		 if(max_limit==0)
-			 return true;
+		 /*if(max_limit==0)
+			 return true;*/
 		 // current_path 6  
 		 boolean success = false; 
-		 if ( y < 2 && check(x,y,tem) )
+		 if ( y < 2 )//&& check(x,y,tem) )
 		 {
 			 
 			 success = getPaths(x, y + 1,tem); // Free!  Go down 
 			 
 		 }
 		 
-		 if ((x < 2 ) && check(x,y,tem)) 
+		 if ((x < 2 ) )//&& check(x,y,tem)) 
 		 {
 		 
 			
@@ -136,8 +139,8 @@ public class Recursions
 		 } 
 	
 		   
-		 if(max_limit==0)
-			 return true;
+		 /*if(max_limit==0)
+			 return true;*/
 		
 		 return success; 
 		
@@ -147,11 +150,61 @@ public class Recursions
 	
 	public boolean check(int x , int y ,String temp)
 	{
-		if(((x+1) <= 2 || (y+1) <=2) && (!temp.contains(x+1+" --> "+y) || !!temp.contains(x+1+" --> "+y)))
+		
+		
+		if(((x+1) <= 2 || (y+1) <=2) && (!temp.contains(x+1+" --> "+y) || !temp.contains(x+1+" --> "+y)))
 			return true;
 		else
 			return false;
 	}
+	
+	
+	ArrayList<String> current_path_n = new ArrayList<String>();
+	/*int max_limit = 10;
+	String strr="";*/
+	public  boolean getPaths_n(int x, int y ) 
+	 {
+		
+		boolean success =false;
+		
+		if(x==2 && y==2 )
+			return true;
+		return success;
+		
+	 }
+	
+	
+	//recursions ex 8.5
+	public static void printPar(int l, int r, char[] str, int count)
+	{   
+		if (l < 0 || r < l) 
+			return; // invalid state 
+		if (l == 0 && r == 0) 
+		{ 
+			System.out.println(str); // found one, 
+		//	so print it 5  
+		} 
+		else 
+		{    
+			if (l > 0) 
+			{ // try a left paren, if there are some available 7   
+				str[count] = '('; 
+				printPar(l - 1, r, str, count + 1);   
+			} 
+			if (r > l) 
+			{ // try a right paren, if there’s a matching left 11    
+				str[count] = ')';    
+				printPar(l, r - 1, str, count + 1); 
+			} 
+			
+		} 
+		}
+	
+			
+		
+		
+	
+	
 }
 	/* public  boolean getPaths(int x, int y) 
 	 { 

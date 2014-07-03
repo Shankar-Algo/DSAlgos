@@ -16,6 +16,8 @@ public class Merge_Sort
 		ms.start();
 		ms.display();
 		
+		
+		
 	}
 	
 	/*public void init()
@@ -28,7 +30,11 @@ public class Merge_Sort
 	
 	void start()
 	{
-		this.sort_parse(a, 0, a.length-1);
+		/*int k = 1;
+		a[k--] = 99;
+		System.out.println(a[0]);
+		System.out.println(a[1]);*/
+		//this.sort_parse(a, 0, a.length-1);
 	}
 	
 	public void sort_parse(int arr[] , int min , int max)

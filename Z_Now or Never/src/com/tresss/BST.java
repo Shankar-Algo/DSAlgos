@@ -1,5 +1,8 @@
 package com.tresss;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class BST
 {
 
@@ -170,10 +173,61 @@ public class BST
 	}
 	
 	
-	
-	
-	
-	
+	void depth_first_traversal(Tress_Node root)
+	{
+		if(root==null)
+			return;
+		System.out.println(root.data);
+		depth_first_traversal(root.left);
+		depth_first_traversal(root.right);
+	}
+	ArrayList<LinkedList<Tress_Node>> obj = new ArrayList<LinkedList<Tress_Node>>();
+	void breadth_first_traversal(int level)
+	{
+		
+		LinkedList<Tress_Node> list = new LinkedList<Tress_Node>();
+		if(root==null)
+			return;
+		
+		if(level==0)
+		{
+			//System.out.println(root.data);
+			list.add(root);
+			//obj.add(list);
+			
+		}
+		else
+		{
+			System.out.println("Level : "+level);
+			for(Tress_Node t : obj.get(level-1))
+			{
+				System.out.println(t.data);
+				if(t.left!=null)
+				{
+					//System.out.println(t);
+					list.add(t.left);
+					
+				}
+				if(t.right!=null)
+				{
+					//System.out.println(t);
+					
+					list.add(t.right);
+				}
+			}
+			
+		
+			
+		}
+		if(list.size()>0)
+		{
+			obj.add(list);
+			breadth_first_traversal(level+1);
+		}
+		else
+			return;
+		
+	}
 	
 	
 	
