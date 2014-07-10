@@ -202,7 +202,7 @@ public class BST
 			for(Tress_Node t : obj.get(level-1))
 			{
 				System.out.println(t.data);
-				if(t.left!=null)
+				/*if(t.left!=null)
 				{
 					//System.out.println(t);
 					list.add(t.left);
@@ -213,6 +213,18 @@ public class BST
 					//System.out.println(t);
 					
 					list.add(t.right);
+				}*/
+				if(t.right!=null)
+				{
+					//System.out.println(t);
+					list.add(t.right);
+					
+				}
+				if(t.left!=null)
+				{
+					//System.out.println(t);
+					
+					list.add(t.left);
 				}
 			}
 			

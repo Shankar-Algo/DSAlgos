@@ -9,8 +9,8 @@ public class BST_OPS {
 		// TODO Auto-generated method stub
 
 		BST_OPS obj = new BST_OPS();
-		//obj.init();
-		obj.dft();
+		obj.init();
+		//obj.dft();
 	}
 
 	void init()
@@ -21,13 +21,14 @@ public class BST_OPS {
 		bst.insert(2);
 		bst.insert(8);
 		bst.insert(15);
-		bst.display_in_order(bst.root);
+		bst.breadth_first_traversal(0);
+		/*bst.display_in_order(bst.root);
 		System.out.println();
 		bst.display_pre_order(bst.root);
 		System.out.println();
-		bst.display_post_order(bst.root);
+		bst.display_post_order(bst.root);*/
 		
-		bst.find_ancest(bst.root.left.right.right, bst.root.left.right);
+		//bst.find_ancest(bst.root.left.right.right, bst.root.left.right);
 		//System.out.println(bst.Tree_bal_check());
 		
 		/*BST bst1 = new BST();

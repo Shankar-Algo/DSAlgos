@@ -104,14 +104,15 @@ public class BT
 	}
 	void display_pre_order(Tress_Node root)
 	{
-	if(root!=null)
-	{
-		System.out.println(root.data);
+	if(root==null)
+	return;
+		
+	System.out.println(root.data);
 		display_pre_order(root.left);
 		
 		display_pre_order( root.right );
 		//System.out.println(root.data);
 		
-	}
+	
 	}
 }
